@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>מדריך היגיינה: הצעות לפתרון</title>
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-blue: #2A5C82;
+            --secondary-green: #4CAF50;
+            --bg-white: #F9FBFF;
+            --text-dark: #333;
+            --problem-bg: #FFF1F1;
+            --solution-bg: #F1FFF3;
+        }
+
+        body {
+            font-family: 'Assistant', sans-serif;
+            background-color: var(--bg-white);
+            color: var(--text-dark);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: var(--primary-blue);
+            color: white;
+            padding: 2rem 1rem;
+            text-align: center;
+            border-bottom: 5px solid var(--secondary-green);
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        .intro {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            margin-bottom: 2rem;
+            border-right: 5px solid var(--secondary-green);
+        }
+
+        section {
+            margin-bottom: 3rem;
+        }
+
+        h2 {
+            color: var(--primary-blue);
+            border-bottom: 2px solid var(--primary-blue);
+            padding-bottom: 0.5rem;
+        }
+
+        h3 {
+            color: #444;
+            margin-top: 1.5rem;
+        }
+
+        .card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+            margin-bottom: 2rem;
+        }
+
+        .card-header {
+            background: var(--primary-blue);
+            color: white;
+            padding: 1rem;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .content-box {
+            padding: 1.5rem;
+        }
+
+        .problem {
+            background-color: var(--problem-bg);
+            padding: 1rem;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            border-right: 4px solid #FFCDCD;
+        }
+
+        .solution {
+            background-color: var(--solution-bg);
+            padding: 1rem;
+            border-radius: 8px;
+            border-right: 4px solid #CDFFD8;
+        }
+
+        .label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #555;
+        }
+
+        .illustration {
+            width: 100%;
+            max-width: 300px;
+            display: block;
+            margin: 1rem auto;
+            opacity: 0.9;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            font-size: 0.9rem;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>מדריך היגיינה: לשמור על ניקיון בלי להשתגע</h1>
+    <p>הצעות לפתרון מותאמות ופשוטות ליום יום</p>
+</header>
+
+<div class="container">
+    <div class="intro">
+        לפעמים אנחנו רוצים להיות נקיים ולהריח טוב, אבל הפעולות עצמן פשוט מציקות – המים קרים מדי, המשחה חריפה, הרעשים מפריעים או שזה סתם מרגיש כמו חפירה. המדריך הזה כאן כדי לעזור לכם למצוא את הדרך שעובדת עבורכם.
+    </div>
+
+    <section>
+        <h2>1. פעולות ניקיון</h2>
+        
+        <div class="card">
+            <div class="card-header">צחצוח שיניים</div>
+            <div class="content-box">
+                <div class="problem">
+                    <span class="label">מה מפריע:</span>
+                    טעם חריף של מנטה, מרקם מגעיל, שעמום, עושה רפלקס הקאה.
+                </div>
+                <div class="solution">
+                    <span class="label">הצעות לפתרון:</span>
+                    <ul>
+                        <li><strong>אם הבעיה היא שיעמום:</strong> לשמוע מוזיקה, לטייל בבית עם המברשת או לראות Reels.</li>
+                        <li><strong>שינוי חומרים:</strong> משחה בלי טעם או צחצוח בלי משחה בכלל.</li>
+                        <li><strong>מקרי קצה:</strong> אם ממש לא הולך - לאכול תפוח במקום. זה עדיף על כלום!</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">מקלחת וחפיפה</div>
+            <div class="content-box">
+                <div class="problem">
+                    <span class="label">מה מפריע:</span>
+                    מעברים חדים (מיבש לרטוב, מבגדים לעירום), זרם מים, סבון ששורף בעיניים, אדים ולחות.
+                </div>
+                <div class="solution">
+                    <span class="label">הצעות לפתרון:</span>
+                    <ul>
+                        <li><strong>להקל על המעברים:</strong> כיוון טמפרטורה מראש, שטיח רגליים נעים, וחימום הבגדים בחורף.</li>
+                        <li><strong>סיסטם (שיטה):</strong> לעבוד מלמעלה למטה כדי לא להתבלבל ולא לשכוח אזורים.</li>
+                        <li><strong>עמדת הצלה:</strong> מגבת יבשה קטנה מחוץ למקלחת לניגוב מהיר של העיניים.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>2. מניעת ריח רע</h2>
+        <p><em>שימו לב: פעולות אלו משלימות את הניקיון אך לא מחליפות אותו.</em></p>
+        <div class="card">
+            <div class="card-header">דאודורנט ובושם</div>
+            <div class="content-box">
+                <div class="problem">
+                    <span class="label">מה מפריע:</span>
+                    ריח חזק מדי, ספריי קר, תחושה דביקה.
+                </div>
+                <div class="solution">
+                    <span class="label">הצעות לפתרון:</span>
+                    להשתמש בסטיק ללא ריח, לשים דאודורנט בלילה כדי שיספג עד הבוקר, ואפשר פשוט לוותר על בושם.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>3. בגדים ונעליים</h2>
+        <div class="card">
+            <div class="card-header">החלפת בגדים</div>
+            <div class="content-box">
+                <div class="problem">
+                    <span class="label">מה מפריע:</span>
+                    קושי להיפרד מהבגד ש"מרגיש נכון" (בלי פתקים, בד נעים).
+                </div>
+                <div class="solution">
+                    <span class="label">הצעות לפתרון:</span>
+                    לקנות כמה עותקים זהים של הבגד הבטוח, ולהשתמש בסל כביסה פתוח ונגיש בחדר.
+                </div>
+            </div>
+        </div>
+    </section>
+
+</div>
+
+<footer>
+    &copy; 2026 - נבנה באהבה עבור תלמידי הכיתה
+</footer>
+
+</body>
+</html>
