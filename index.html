@@ -3,214 +3,220 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>מדריך היגיינה: הצעות לפתרון</title>
+    <title>מדריך היגיינה אישית</title>
     <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary-blue: #2A5C82;
-            --secondary-green: #4CAF50;
-            --bg-white: #F9FBFF;
-            --text-dark: #333;
-            --problem-bg: #FFF1F1;
-            --solution-bg: #F1FFF3;
+            --primary: #2A5C82; /* כחול עמוק */
+            --secondary: #4CAF50; /* ירוק רענן */
+            --accent: #E3F2FD; /* תכלת בהיר לרקע */
+            --text: #2C3E50;
+            --white: #ffffff;
         }
 
         body {
             font-family: 'Assistant', sans-serif;
-            background-color: var(--bg-white);
-            color: var(--text-dark);
+            background-color: #f4f7f9;
+            color: var(--text);
             margin: 0;
             padding: 0;
             line-height: 1.6;
         }
 
         header {
-            background-color: var(--primary-blue);
+            background: linear-gradient(135deg, var(--primary) 0%, #1a3a52 100%);
             color: white;
-            padding: 2rem 1rem;
+            padding: 4rem 1rem;
             text-align: center;
-            border-bottom: 5px solid var(--secondary-green);
+            clip-path: ellipse(150% 100% at 50% 0%);
         }
+
+        header h1 { margin: 0; font-size: 2.5rem; }
+        header p { opacity: 0.9; font-size: 1.2rem; margin-top: 10px; }
 
         .container {
-            max-width: 800px;
-            margin: 2rem auto;
-            padding: 0 1rem;
+            max-width: 1000px;
+            margin: -50px auto 50px;
+            padding: 0 20px;
         }
 
-        .intro {
-            background: white;
-            padding: 1.5rem;
-            border-radius: 12px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-            margin-bottom: 2rem;
-            border-right: 5px solid var(--secondary-green);
+        .intro-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            text-align: center;
+            margin-bottom: 40px;
+            border-bottom: 4px solid var(--secondary);
         }
 
-        section {
-            margin-bottom: 3rem;
+        .section-title {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            color: var(--primary);
+            margin: 40px 0 20px;
         }
 
-        h2 {
-            color: var(--primary-blue);
-            border-bottom: 2px solid var(--primary-blue);
-            padding-bottom: 0.5rem;
-        }
-
-        h3 {
-            color: #444;
-            margin-top: 1.5rem;
+        .section-title span {
+            background: var(--secondary);
+            color: white;
+            width: 35px;
+            height: 35px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            font-weight: bold;
         }
 
         .card {
-            background: white;
-            border-radius: 15px;
+            background: var(--white);
+            border-radius: 20px;
+            margin-bottom: 30px;
+            display: flex;
+            flex-wrap: wrap; /* תמיכה במובייל */
             overflow: hidden;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
-            margin-bottom: 2rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.03);
+            transition: transform 0.3s ease;
         }
 
-        .card-header {
-            background: var(--primary-blue);
-            color: white;
-            padding: 1rem;
-            font-weight: bold;
-            font-size: 1.2rem;
-        }
+        .card:hover { transform: translateY(-5px); }
 
-        .content-box {
-            padding: 1.5rem;
-        }
-
-        .problem {
-            background-color: var(--problem-bg);
-            padding: 1rem;
-            border-radius: 8px;
-            margin-bottom: 1rem;
-            border-right: 4px solid #FFCDCD;
-        }
-
-        .solution {
-            background-color: var(--solution-bg);
-            padding: 1rem;
-            border-radius: 8px;
-            border-right: 4px solid #CDFFD8;
-        }
-
-        .label {
-            font-weight: bold;
-            display: block;
-            margin-bottom: 0.5rem;
-            color: #555;
-        }
-
-        .illustration {
-            width: 100%;
-            max-width: 300px;
-            display: block;
-            margin: 1rem auto;
-            opacity: 0.9;
-        }
-
-        footer {
-            text-align: center;
+        .card-content {
+            flex: 1;
             padding: 2rem;
-            font-size: 0.9rem;
-            color: #777;
+            min-width: 300px;
+        }
+
+        .card-image {
+            flex: 1;
+            background-color: var(--accent);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 300px;
+            padding: 20px;
+        }
+
+        .card-image img {
+            max-width: 80%;
+            height: auto;
+        }
+
+        .problem-box {
+            background: #fff5f5;
+            border-right: 4px solid #feb2b2;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+
+        .solution-box {
+            background: #f0fff4;
+            border-right: 4px solid #9ae6b4;
+            padding: 15px;
+            border-radius: 8px;
+        }
+
+        .label { font-weight: bold; color: var(--primary); display: block; margin-bottom: 5px; }
+
+        .note-box {
+            background: var(--accent);
+            padding: 15px;
+            border-radius: 12px;
+            margin: 20px 0;
+            border-right: 4px solid var(--primary);
+        }
+
+        footer { text-align: center; padding: 40px; color: #95a5a6; }
+
+        @media (max-width: 768px) {
+            .card { flex-direction: column; }
+            .card-image { order: -1; }
         }
     </style>
 </head>
 <body>
 
 <header>
-    <h1>מדריך היגיינה: לשמור על ניקיון בלי להשתגע</h1>
-    <p>הצעות לפתרון מותאמות ופשוטות ליום יום</p>
+    <h1>הגיינה אישית בדרך שלך</h1>
+    <p>מדריך הצעות לפתרון (Life Hacks) ליוום-יום רגוע יותר</p>
 </header>
 
 <div class="container">
-    <div class="intro">
-        לפעמים אנחנו רוצים להיות נקיים ולהריח טוב, אבל הפעולות עצמן פשוט מציקות – המים קרים מדי, המשחה חריפה, הרעשים מפריעים או שזה סתם מרגיש כמו חפירה. המדריך הזה כאן כדי לעזור לכם למצוא את הדרך שעובדת עבורכם.
+    <div class="intro-card">
+        לפעמים אנחנו רוצים להיות נקיים ולהריח טוב, אבל הפעולות עצמן פשוט מציקות. המדריך הזה כאן כדי לעזור לכם למצוא פתרונות שעובדים עבורכם, בלי להילחם בתחושות.
     </div>
 
-    <section>
-        <h2>1. פעולות ניקיון</h2>
-        
-        <div class="card">
-            <div class="card-header">צחצוח שיניים</div>
-            <div class="content-box">
-                <div class="problem">
-                    <span class="label">מה מפריע:</span>
-                    טעם חריף של מנטה, מרקם מגעיל, שעמום, עושה רפלקס הקאה.
-                </div>
-                <div class="solution">
-                    <span class="label">הצעות לפתרון:</span>
-                    <ul>
-                        <li><strong>אם הבעיה היא שיעמום:</strong> לשמוע מוזיקה, לטייל בבית עם המברשת או לראות Reels.</li>
-                        <li><strong>שינוי חומרים:</strong> משחה בלי טעם או צחצוח בלי משחה בכלל.</li>
-                        <li><strong>מקרי קצה:</strong> אם ממש לא הולך - לאכול תפוח במקום. זה עדיף על כלום!</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
+    <div class="section-title"><span>1</span> <h2>פעולות ניקיון</h2></div>
 
-        <div class="card">
-            <div class="card-header">מקלחת וחפיפה</div>
-            <div class="content-box">
-                <div class="problem">
-                    <span class="label">מה מפריע:</span>
-                    מעברים חדים (מיבש לרטוב, מבגדים לעירום), זרם מים, סבון ששורף בעיניים, אדים ולחות.
-                </div>
-                <div class="solution">
-                    <span class="label">הצעות לפתרון:</span>
-                    <ul>
-                        <li><strong>להקל על המעברים:</strong> כיוון טמפרטורה מראש, שטיח רגליים נעים, וחימום הבגדים בחורף.</li>
-                        <li><strong>סיסטם (שיטה):</strong> לעבוד מלמעלה למטה כדי לא להתבלבל ולא לשכוח אזורים.</li>
-                        <li><strong>עמדת הצלה:</strong> מגבת יבשה קטנה מחוץ למקלחת לניגוב מהיר של העיניים.</li>
-                    </ul>
-                </div>
+    <div class="card">
+        <div class="card-content">
+            <h3>צחצוח שיניים</h3>
+            <div class="problem-box">
+                <span class="label">מה מפריע:</span>
+                טעם חריף של מנטה, מרקם מגעיל, שעמום, עושה רפלקס הקאה.
+            </div>
+            <div class="solution-box">
+                <span class="label">הצעות לפתרון:</span>
+                • לנסות משחה בלי טעם או צחצוח בלי משחה.<br>
+                • לשמוע מוזיקה או לראות Reels בזמן הצחצוח.<br>
+                • <strong>האק למקרה קצה:</strong> אכילת תפוח עוזרת לנקות את השן.
             </div>
         </div>
-    </section>
+        <div class="card-image">
+            <img src="https://illustrations.popsy.co/blue/morning-routine.svg" alt="Teeth">
+        </div>
+    </div>
 
-    <section>
-        <h2>2. מניעת ריח רע</h2>
-        <p><em>שימו לב: פעולות אלו משלימות את הניקיון אך לא מחליפות אותו.</em></p>
-        <div class="card">
-            <div class="card-header">דאודורנט ובושם</div>
-            <div class="content-box">
-                <div class="problem">
-                    <span class="label">מה מפריע:</span>
-                    ריח חזק מדי, ספריי קר, תחושה דביקה.
-                </div>
-                <div class="solution">
-                    <span class="label">הצעות לפתרון:</span>
-                    להשתמש בסטיק ללא ריח, לשים דאודורנט בלילה כדי שיספג עד הבוקר, ואפשר פשוט לוותר על בושם.
-                </div>
+    <div class="card">
+        <div class="card-image" style="background-color: #e6fffa;">
+            <img src="https://illustrations.popsy.co/green/showering.svg" alt="Shower">
+        </div>
+        <div class="card-content">
+            <h3>מקלחת וחפיפה</h3>
+            <div class="problem-box">
+                <span class="label">מה מפריע:</span>
+                מעברים חדים (מיבש לרטוב), זרם המים, סבון ששורף בעיניים, אדים ולחות.
+            </div>
+            <div class="solution-box">
+                <span class="label">הצעות לפתרון:</span>
+                • <strong>מעברים:</strong> לכוון טמפרטורה מראש, לחמם בגדים בחורף.<br>
+                • <strong>עיניים:</strong> מגבת יבשה בהישג יד מחוץ למקלחת לניגוב מהיר.<br>
+                • <strong>סיסטם:</strong> לעבוד מלמעלה למטה כדי לא להתבלבל.
             </div>
         </div>
-    </section>
+    </div>
 
-    <section>
-        <h2>3. בגדים ונעליים</h2>
-        <div class="card">
-            <div class="card-header">החלפת בגדים</div>
-            <div class="content-box">
-                <div class="problem">
-                    <span class="label">מה מפריע:</span>
-                    קושי להיפרד מהבגד ש"מרגיש נכון" (בלי פתקים, בד נעים).
-                </div>
-                <div class="solution">
-                    <span class="label">הצעות לפתרון:</span>
-                    לקנות כמה עותקים זהים של הבגד הבטוח, ולהשתמש בסל כביסה פתוח ונגיש בחדר.
-                </div>
+    <div class="section-title"><span>2</span> <h2>מניעת ריח רע</h2></div>
+    <div class="note-box">
+        אלו פעולות משלימות שעוזרות להרגיש רעננים, אבל הן לא מחליפות את הניקיון עצמו.
+    </div>
+
+    <div class="card">
+        <div class="card-content">
+            <h3>דאודורנט ובושם</h3>
+            <div class="problem-box">
+                <span class="label">מה מפריע:</span>
+                ריח חזק מדי, תחושה דביקה, ספריי קר.
+            </div>
+            <div class="solution-box">
+                <span class="label">הצעות לפתרון:</span>
+                • להשתמש בדאודורנט סטיק ללא ריח.<br>
+                • לשים דאודורנט בלילה כדי שיספג עד הבוקר.<br>
+                • אפשר לוותר על בושם כדי למנוע עומס ריחות.
             </div>
         </div>
-    </section>
+        <div class="card-image">
+            <img src="https://illustrations.popsy.co/blue/home-clean.svg" alt="Fresh">
+        </div>
+    </div>
 
 </div>
 
 <footer>
-    &copy; 2026 - נבנה באהבה עבור תלמידי הכיתה
+    נבנה עבור הכיתה &copy; 2026
 </footer>
 
 </body>
